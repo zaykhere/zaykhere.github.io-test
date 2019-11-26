@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Poppins&display=swap');
+
+
+*{   /* isko mat cherna */
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+#logo{ /* ye h logo k h3 ki jagah ise kro modify */
+    font-family: 'Noto Serif', serif;
+    color:white;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+body{
+    font-family: 'Poppins' , sans-serif;
+}
+
+.navbar{ /* nav class. I changed the name from one to this */
+    font-size: 18px;
+    background-color: black; 
+
+}
+
+.main-nav{
+    list-style-type: none;
+    display: none;
+}
+
+.nav-links,
+.logo {
+    text-decoration: none;
+    color:white;
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.main-nav li a:hover{
+    border-bottom: 2px solid white;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right:20px;
+    cursor: pointer; 
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+  }
+
+  @media screen and (min-width: 815px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,
+    .nav-links:hover {
+        color:white;
+    }
+
+    
+  }
+
+
+#header{
+   /* max-height:500px; */
+    margin-top:5px;
+    background-image: url('/images/back.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+  /*  background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+}
+
+@media screen and (max-device-width: 608px){
+    #header{
+    background-image: url('/images/back.jpg');
+}
+}
+
+.butt:link, .butt:visited{
+    background-color: black;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none; 
+    padding-right:15px;
+    margin-right: 25px;
+    border: 2px solid white;
+}
+
+.butt:hover, .butt:active {
+      background-color: white;
+      color: black;
+      
+      padding-right:15px;
+     
+  }
+
+  .buttons{
+      position: absolute;
+      margin-left: 40%;
+      margin-bottom: 10%;
+      bottom: 20%;
+  }
+
+  @media screen and (max-width: 520px) {
+    .buttons{
+        position:absolute;
+        margin-left:15%;
+
+    }
+  }
+
+  @media screen and (max-width: 342px) {
+      .buttons{
+          margin:5px;
+          margin-left:30%;
+      }
+      .butt{
+          display: block;
+          margin-bottom: 12px;
+      }
+  }
+
+  @media screen and (max-width: 330px){
+    .butt{ 
+        position: relative;
+        bottom: 2px;
+    }
+
+    .buttons{
+        position: absolute;
+        bottom: 75px;
+    }
+
+
+  }
+
+  .welcome , .tagline {
+      color:white;
+      text-align: center;
+     
+  }
+
+  .welcome-text{
+      justify-content: center;
+      position: relative;
+      top:10%;  
+  }
+
+  .welcome{
+      font-size: 35px;
+      color: #818487;
+  }
+
+  .tagline {
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: 5%;
+  }
+
+  .services{
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px 90px;
+    margin-left: 15px;
+  }
